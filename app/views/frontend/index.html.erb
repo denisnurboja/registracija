@@ -1,0 +1,11 @@
+<h1>Proizvodi</h1>
+<ul>
+<% @products.each do |product| %>
+<li>
+<%= product.id%>
+<%= product.model%>
+<%= link_to 'Registracija', product_registrations_path(product) %>
+</li>
+<% end %>
+</ul>
+

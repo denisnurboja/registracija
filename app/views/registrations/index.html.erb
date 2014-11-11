@@ -1,0 +1,29 @@
+<h1>Listing registrations <%= @products.model%></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Ime</th>
+      <th>Serial</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.registrations.each do |registration| %>
+      <tr>
+        <td><%= registration.product_id %></td>
+        <td><%= registration.name %></td>
+        <td><%= registration.serial %></td>
+        <td><%= link_to 'Show', product_registration_path(@products,registration) %></td>
+        
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Registration', new_product_registration_path(@products) %>
