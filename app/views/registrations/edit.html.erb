@@ -1,6 +1,6 @@
 <h1>Editing registration</h1>
-
+<%= form_for(@product, @registration) do |form| %>
 <%= render 'form' %>
-
+<% end %>
 <%= link_to 'Show', product_registration_path %> |
 <%= link_to 'Back', product_registrations_path %>

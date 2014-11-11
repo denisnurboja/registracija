@@ -1,10 +1,13 @@
 <h1>Proizvodi</h1>
-<ul>
+<ul class="row">
 <% @products.each do |product| %>
-<li>
-<%= product.id%>
+<li class="col-xs-3">
+<img src="http://cdn1.mos.techradar.futurecdn.net//art/televisions/Sony/KDL-42W653A/logo%20copy-1200-80.jpg" >
+
 <%= product.model%>
-<%= link_to 'Registracija', product_registrations_path(product) %>
+<!--
+<%= link_to 'Registracija', product_registrations_path(product), class: 'btn btn-success' %> -->
+<%= link_to 'Registracija', new_product_registration_path(product), class: 'btn btn-success'%>
 </li>
 <% end %>
 </ul>

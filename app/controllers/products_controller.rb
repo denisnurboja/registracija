@@ -71,4 +71,8 @@ class ProductsController < ApplicationController
     def product_params
       params.require(:product).permit(:model)
     end
+
+    def find_products
+    @products = Product.find(params[:product_id])
+  end
 end

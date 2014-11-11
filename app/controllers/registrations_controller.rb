@@ -30,7 +30,7 @@ class RegistrationsController < ApplicationController
 
     respond_to do |format|
       if @registration.save
-        format.html { redirect_to product_registrations_path, notice: 'Registration was successfully created.' }
+        format.html { redirect_to product_registrations_path, notice: 'USPJESNO STE REGISTROVALI VAS PROIZVOD.' }
         format.json { render :show, status: :created, location: @registration }
       else
         format.html { render :new }
@@ -70,7 +70,7 @@ class RegistrationsController < ApplicationController
   end
     # Use callbacks to share common setup or constraints between actions.
     def set_registration
-      @registration = Registration.find(params[:id])
+      @registration = Registration.find(params[:product_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
