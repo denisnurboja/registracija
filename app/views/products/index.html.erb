@@ -11,7 +11,10 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= product.model %></td>
+        <td>
+          <span class="has-tooltip" data-toggle="tooltip" title="<%= "Created on #{product.created_at.strftime("%m/%e/%Y at %w:%M %p")}, Last modified on #{product.updated_at.strftime("%m/%e/%Y at %w:%M %p")}" %>">
+        <%= product.model %></td>
+        </span>
 
 
         <td><%= link_to 'Registracija', product_registrations_path(product) %></td>

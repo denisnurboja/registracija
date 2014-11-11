@@ -10,8 +10,13 @@
       <% end %>
       <% end %>
   <div>
-  <%= form.label :serial %>
-  <%= form.text_field :serial %>
+  <span class="has-tooltip" data-toggle="tooltip" title="unesite serijski broj u formatu SO1-XXXXXX-X">
+   <%= form.label :serial %>
+   <%= form.text_field :serial %>
+  </span>
+
+  
+ 
   </div>
   <div>
   <%= form.label :name %>
