@@ -7,10 +7,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: reg_development
+  database: db11398
   pool: 5
-  username: denis
-  password: denisnurboja
+  username: app
+  password: qBYg0P_xVTQjVu1_NoYp
 
 development:
   <<: *default
@@ -25,4 +25,4 @@ test:
 
 production:
   <<: *default
-  database: reg_production
+  database: db11398
